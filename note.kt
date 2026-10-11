@@ -1,3 +1,5 @@
+package com.gamegam.kartrush
+
 data class Notice(
     val title: String, 
     val noticeId: String,
