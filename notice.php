@@ -83,7 +83,7 @@ class notice{
         $notice = $results["notice"]["notice"] ?? [];
         $notice_season = $results["season"]["season_notice"] ?? [];
         $event_notice = $results["event"]["event_notice"] ?? [];
-        $note = array_merge($notice, $notice_season, $event_notice, $gm);
+        $note = array_merge($notice, $notice_season, $event_notice);
         usort($note, function ($a, $b) {return strtotime($b['date']) <=> strtotime($a['date']);});
         $perPage = 5;
         $page = max(1, $page);
